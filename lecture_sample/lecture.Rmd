@@ -52,23 +52,51 @@ use_git_config(user.name = "Jane Doe", user.email = "jane@example.org")
 **Substitute your name and the email associated with your Github account!!!!**. 
 
 
+# The Workflow
+
+## Definitions
+
+Before we get into the workflow, there is a lot of jargon that needs to be defined. Here are some of the main Git commands, explained in layman terms:
+
+* **Clone** - make a copy. You will generally only need to use this command once at the start of every project.
+* **Stage** - get ready to save a new Git version of a file (or files). 
+* **Commit** - save the changes.
+* **Push** - send the new changes. 
+* **Pull** - "download" any updates.
+
+Note that all of these commands are baked into RStudio's user interface and therefore we will not actually have to type any of these commands (although you can!). These five commands are the essence of using Git. 
+
+## The Workflow 
+
+*This section is to be covered thoroughly in the lecture.*
+
+This section will cover the workflow from the start of a new project^[By project, I do not mean RProject.] to the general day-to-day tasks. Here are the steps:
+
+1. Create a Github Repository with an intuitive name. Initialize the Github repository with a Readme, and keep all the other defaults the same. (Only needs to be done 1 time for each project)
+2. Clone the Github Repository in RStudio - this requires going to the main page of your Github repository, clicking the green CODE button, copying the HTTPS to your clipboard, then going to RStudio and clicking File -> New Project -> Version Control -> Git then copying the HTTPS code into the Repository URL space, naming the RProject the same as your Github repository^[This is not necessary, you can name it whatever you want, but why confuse yourself?], and choosing the folder directory on your computer that you want this project to be nested in. (Only needs to be done 1 time for each project)
+
+After these two steps are done, the workflow will remain as follows *for the rest of your project*.
+
+3. Pull any changes. It's important to make this a habit as the first thing you do when you open your RStudio project.
+4. Edit files as necessary. When done making changes, stage them, commit them (adding in a nice message so you know what you did), and then push them. 
+5. Pull again. This is mostly as insurance in case you forget to pull in a future step 3. Do it. It will not hurt you and will save you headaches down the road.
 
 
-# The Main Commands
+# The Main Commands (Command Line/Terminal)
 
-Assuming all of this is done on the main branch. 
+Assuming all of this is done on the master branch. 
 
-Stage changes (get rady for adding them to a version)
+* Stage changes (get ready for saving all the changes to a version)
 ```{bash, eval = F}
 git add -A
 ```
 
-Commit changes (commit to adding these changes to your version)
+Commit changes (finalize adding these changes to your version)
 ```{bash, eval = F}
 git commit -m "this is a commit to take the staged changes and save them as a version"
 ```
 
-Push the changes (push)
+Push the changes (put the new changes onto Github)
 ```{bash, eval = F}
 git push
 ```
