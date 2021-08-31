@@ -7,4 +7,4 @@ Make another correction.
 
 Correction from branch_2.
 
-Git correction.
+Git correction
