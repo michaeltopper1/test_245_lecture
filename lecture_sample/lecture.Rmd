@@ -115,6 +115,7 @@ As stated before, branches are valuable for independent work when you want to tr
 Hence, let's go through the two scenarios: (1) you like your changes you made on your branch and want to merge them into the master branch (2) you do not like your changes and want your files to be back to how they were.
 
 1. Now that you like your changes, you can push them to Github. 
+2. I don't like the cahnges 
 
 ## Branches when working collaboratively
 
