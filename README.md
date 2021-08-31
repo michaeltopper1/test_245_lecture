@@ -6,5 +6,3 @@ Try out the following change. Test out the message like so.
 Make another correction.
 
 Correction from branch_2.
-
-Git correction
