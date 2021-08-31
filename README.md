@@ -7,4 +7,8 @@ Make another correction.
 
 Correction from branch_2.
 
+<<<<<<< HEAD
 git corrections.
+=======
+Git correction
+>>>>>>> parent of 9cac784 (no git correction)
