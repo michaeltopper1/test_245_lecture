@@ -104,13 +104,29 @@ git push
 
 # Branches
 
-Branches are one of the most appealing features of Git. As an example, suppose you want to try a new spin on your paper - you want to try a whole new analysis, but don't necessarily want to "commit" (bad pun) to the changes. This is where branches come in. A branch is essentially a clone of your files. You can make changes, create new documents, etc. but you can do this all without changing your master copy. However, if you like the changes you make on your branch, you can merge them into the master copy. Don't like your changes? Then just delete the branch and do a hard reset (command coming soon) to bring yourself back to the original. For the purposes of this document, we will call our main copy of our files the "master branch". This is generally the default on Github, and you should either adopt this convention or find a very intuitive substitute. 
+Branches are one of the most appealing features of Git. As an example, suppose you want to try a new spin on your paper - you want to try a whole new analysis, but don't necessarily want to "commit" (bad pun) to the changes. This is where branches come in. A branch is essentially a clone of your files. You can make changes, create new documents, etc. but you can do this all without changing your master copy. However, if you like the changes you make on your branch, you can push and merge them into the master copy. Don't like your changes? Then just delete the branch and switch back to the main copy. For the purposes of this document, we will call our main copy of our files the "master branch". This is generally the default on Github, and you should either adopt this convention or find a very intuitive substitute. 
 
-Branches have a steep learning curve (as does all of Git), but they are extremely important when working collaboratively. Consider the following workflow which, as you can see, would cause problems:
+Branches have a steep learning curve (as does all of Git), but they are extremely important and make Git worthwhile. 
+
+## Branches when working independently
+
+As stated before, branches are valuable for independent work when you want to try out new ideas or new paths in your analysis. For instance, suppose you want to try out some triple differences in your paper. You can create a new branch titled "analysis_triple_difference", create new documents, new tables, new R scripts etc. If you want these to be saved on Github (you do), stage and commit the changes you made in the branch, but **do not push unless you are sure you want these changes saved into the master branch**. Remember, the branch is effectively a copy of the master with you "branching off" into new directions. All of your work is going to be saved locally and remotely when you commit the changes, but it will not be part of the master branch until you push and "create a pull request" on Github (more on this in a second).
+
+Hence, let's go through the two scenarios: (1) you like your changes you made on your branch and want to merge them into the master branch (2) you do not like your changes and want your files to be back to how they were.
+
+1. Now that you like your changes, you can push them to Github. 
+
+## Branches when working collaboratively
+
+Consider the following workflow which, as you can see, would cause problems:
 
 *You and your coauthor both decide to work on the R script titled `regressions_main.R` at 10:00am. You want to try one analysis, while your coauthor wants to try another. At 10:30am, you find some unique results that you believe really enhance your paper. You save the file, commit the changes, and (try to) push to Github. However, 5 minutes before you, your coauthor found different results that they believe are worthy of saving. They saved, committed, and pushed to Github at 10:25am. Now when you try and push your changes, there is an issue. Git had already saved the version that your coauthor pushed at 10:25, so it does not know how to merge in your changes with the new lines your coauthor made.*
 
 Branches solve this problem. Each person can make their own copy of the master branch (call this branch_objective), and begin working on their changes. They can save, commit, and push their changes to their branch, thus allowing Git to keep track of their changes, all without merging to the master branch. If you want to change the master branch you can "create a pull request" on Github and assign your coauthor to look over the changes on which they can accept or deny. If accepted, these changes get merged into the master branch. Pull these new changes in, and rinse and repeat.
+
+## Creating a branch
+
+
 
 Common Commands in the Shell:
 
