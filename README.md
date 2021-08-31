@@ -8,6 +8,7 @@ Make another correction.
 Correction from branch_2.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 git corrections.
 =======
 Git correction
