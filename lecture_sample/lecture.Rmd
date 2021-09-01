@@ -244,10 +244,6 @@ You can check out other nice patterns for ignoring files using the [git document
 
 Of course, the main benefit of using Git is that you can revert back to previous versions of your work. In this section, I'll cover the two most frequent scenarios: reverting a commit that just occurred, and reverting back to a long-ago version. They are both similar, although the latter must be done carefully to avoid potential disaster (I'll show you my semi-fool-proof way).
 
-## Download Github Desktop
-
-Download Github Desktop [here](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop). Follow the instructions and install.
-
-## Reverting a commit
+## Reverting to a previous version
 
 
