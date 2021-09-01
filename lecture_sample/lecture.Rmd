@@ -246,3 +246,8 @@ Of course, the main benefit of using Git is that you can revert back to previous
 
 ## Download Github Desktop
 
+Download Github Desktop [here](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop). Follow the instructions and install.
+
+## Reverting a commit
+
+
