@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.7.23)  2 SEP 2021 14:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.7.23)  2 SEP 2021 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -519,28 +519,28 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 119
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-33.
+36.
 (/Users/michaeltopper/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-45.
+48.
 (/Users/michaeltopper/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 150.
+(Font)              <10> on input line 153.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 150.
+(Font)              <7> on input line 153.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 150.
+(Font)              <5> on input line 153.
 <terminal.png, id=99, 1169.36874pt x 736.7525pt>
 File: terminal.png Graphic file (type png)
 <use terminal.png>
-Package pdftex.def Info: terminal.png  used on input line 177.
+Package pdftex.def Info: terminal.png  used on input line 180.
 (pdftex.def)             Requested size: 516.75423pt x 325.57735pt.
 
-Overfull \hbox (46.9992pt too wide) in paragraph at lines 177--177
+Overfull \hbox (46.9992pt too wide) in paragraph at lines 180--180
 [][]
  []
 
@@ -554,32 +554,32 @@ map}] [2pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.241 \end{Shaded}
-                   <./terminal.png>]
+l.239 \begin{Shaded}
+                     <./terminal.png>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 275.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 278.
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 275.
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 278.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-282.
+285.
 (/Users/michaeltopper/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
 LaTeX Font Warning: Font shape `TS1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `TS1/lmtt/b/sl' tried instead on input line 282.
+(Font)              Font shape `TS1/lmtt/b/sl' tried instead on input line 285.
 
 
 [3]
 <stage.png, id=144, 3597.44pt x 2248.4pt>
 File: stage.png Graphic file (type png)
 <use stage.png>
-Package pdftex.def Info: stage.png  used on input line 393.
+Package pdftex.def Info: stage.png  used on input line 396.
 (pdftex.def)             Requested size: 516.70258pt x 322.9391pt.
 
-Overfull \hbox (46.94756pt too wide) in paragraph at lines 393--393
+Overfull \hbox (46.94756pt too wide) in paragraph at lines 396--396
 [][]
  []
 
@@ -590,10 +590,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <commit.png, id=168, 3597.44pt x 2248.4pt>
 File: commit.png Graphic file (type png)
 <use commit.png>
-Package pdftex.def Info: commit.png  used on input line 429.
+Package pdftex.def Info: commit.png  used on input line 432.
 (pdftex.def)             Requested size: 516.70258pt x 322.9391pt.
 
-Overfull \hbox (46.94756pt too wide) in paragraph at lines 429--429
+Overfull \hbox (46.94756pt too wide) in paragraph at lines 432--432
 [][]
  []
 
@@ -604,20 +604,20 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.447 
+l.450 
        <./stage.png>] [6pdfTeX warning (ext4): destination with the same identi
 fier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.477 \end{Shaded}
+l.480 \end{Shaded}
                    <./commit.png>]
 <branch.png, id=188, 3597.44pt x 2248.4pt>
 File: branch.png Graphic file (type png)
 <use branch.png>
-Package pdftex.def Info: branch.png  used on input line 553.
+Package pdftex.def Info: branch.png  used on input line 556.
 (pdftex.def)             Requested size: 516.70258pt x 322.9391pt.
 
-Overfull \hbox (46.94756pt too wide) in paragraph at lines 553--553
+Overfull \hbox (46.94756pt too wide) in paragraph at lines 556--556
 [][]
  []
 
@@ -625,15 +625,15 @@ Overfull \hbox (46.94756pt too wide) in paragraph at lines 553--553
 4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.601 \end{enumerate}
+l.604 \end{enumerate}
                       <./branch.png>]
 <pullrequest.png, id=211, 903.87688pt x 333.245pt>
 File: pullrequest.png Graphic file (type png)
 <use pullrequest.png>
-Package pdftex.def Info: pullrequest.png  used on input line 604.
+Package pdftex.def Info: pullrequest.png  used on input line 607.
 (pdftex.def)             Requested size: 516.75989pt x 190.52112pt.
 
-Overfull \hbox (47.00487pt too wide) in paragraph at lines 604--604
+Overfull \hbox (47.00487pt too wide) in paragraph at lines 607--607
 [][]
  []
 
@@ -641,7 +641,7 @@ Overfull \hbox (47.00487pt too wide) in paragraph at lines 604--604
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.650 \end{itemize}
+l.653 \end{itemize}
                     <./pullrequest.png>] [10] [11] (./lecture.aux)
 Package rerunfilecheck Info: File `lecture.out' has not changed.
 (rerunfilecheck)             Checksum: 4E58B98BCAB7CB33740E6A65984BC8B8;3406.
@@ -669,7 +669,7 @@ ublic/lm/lmri8.pfb></Users/michaeltopper/Library/TinyTeX/texmf-dist/fonts/type1
 /public/lm/lmtko10.pfb></Users/michaeltopper/Library/TinyTeX/texmf-dist/fonts/t
 ype1/public/lm/lmtt10.pfb></Users/michaeltopper/Library/TinyTeX/texmf-dist/font
 s/type1/public/lm/lmtti10.pfb>
-Output written on lecture.pdf (11 pages, 2016335 bytes).
+Output written on lecture.pdf (11 pages, 2016442 bytes).
 PDF statistics:
  319 PDF objects out of 1000 (max. 8388607)
  267 compressed objects within 3 object streams
