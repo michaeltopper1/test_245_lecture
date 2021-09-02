@@ -32,13 +32,13 @@ The next few subsections are dedicated to getting all of software installed and 
 
 ## Installing Git 
 
-Git is much different from Github. Git is the actual version control software, while Github is hosting service that provide a home for your Git-based projects. Think of Github as an online repository of files that Git can communicate with to make changes, while Git is the actual software that is tracking your changes. Before we can get to Github, we need to install the Git software on our local machine. But first, let's check if you installed it at one point already (all of us probably tried learning at one point). Open up the terminal in RStudio and type in the following:
+Git is much different from Github. Git is the actual version control software, while Github is hosting service that provide a home for your Git-based projects. Think of Github as an online repository of files that Git can communicate with to make changes. Before we can get to Github, we need to install the Git software on our local machine. But first, let's check if you installed it at one point already (all of us probably tried learning at one point). Open up the terminal in RStudio (Tools -> Terminal -> New Terminal) and type in the following:
 
 ```{bash}
 which git
 ```
 
-Did you get output showing you a file path? Great! You have Git installed and are ready to move on to the next section. If not, you should see something like `git: command not found` and you will need to install Git. Here is where to download:
+Did you get output showing you a file path similar to the one shown above? Great! You have Git installed and are ready to move on to the next section. If not, you should see something like `git: command not found` and you will need to install Git. Here is where to download:
 
 Windows:
 
@@ -50,7 +50,7 @@ Mac:
 
 ## Create a Github account
 
-Once you have installed Git, it is time to make a Github account. Go [here](https://github.com/), and create an account. **Give your username some thought** since it can be a pain to change in the future. I recommend incorporating your actual name into your username. Why? Github is a website many professionals use and it's important to associate yourself with your work. Additionally, you can create your own website and host it for free using Github, but the url will be something like `yourusername.github.io`. Hence, choose your username wisely, as it will be how many access your research and materials for the foreseeable future. Also I recommend **not using your ucsb email** for your Github account. This email will disappear when you graduate. There is no need for a headache 5 years from now. 
+Once you have installed Git, it is time to make a Github account. Go [here](https://github.com/), and create an account. **Give your username some thought** since it can be a pain to change in the future. I recommend incorporating your actual name into your username. Why? Github is a website many professionals use and it's important to associate yourself with your work. Additionally, you can create your own website and host it for free using Github, but the url will be something like `yourusername.github.io`. Hence, choose your username wisely, as it will be how many access your research and materials for the foreseeable future. Also, **I recommend against using your UCSB email for your Github account**. This email will disappear when you graduate. There is no need for a headache 5 years from now. 
 
 ## Introduce yourself to Git
 
@@ -65,7 +65,7 @@ use_git_config(user.name = "Jane Doe", user.email = "jane@example.org")
 
 ## Create a PAT
 
-*This section is almost copied entirely from [Jenny Bryan's](https://happygitwithr.com/credential-caching.html) book*
+*This section is almost copied entirely from [Jenny Bryan's](https://happygitwithr.com/credential-caching.html) book.*
 
 A PAT is a personal access token. Think of it as a special password. Nowadays (as of August 2021), you need to have a PAT to be able to do the workflow proposed in this document. 
 
@@ -75,7 +75,7 @@ Github offers instructions for creating a personal access token and I suggest yo
 usethis::create_github_token()
 ```
 
-This function  take you to the web form to create a PAT with t he added benefit that it pre-selects the recommended scopes.
+This function  take you to the web form to create a PAT with the added benefit that it pre-selects the recommended scopes.
 
 Once you have created your PAT, install the `gitcreds` package and run the following lines (following the prompts returned by the function output):
 
@@ -110,25 +110,25 @@ Note that all of these commands are baked into RStudio's user interface and ther
 
 This section will cover the workflow from the start of a new project^[By project, I do not mean RProject.] to the general day-to-day tasks. Here are the steps:
 
-1. Create a Github Repository with an intuitive name. Initialize the Github repository with a Readme, and keep all the other defaults the same. (Only needs to be done 1 time for each project)
+1. Create a Github Repository with an intuitive name. Initialize the Github repository with a Readme, and keep all the other defaults the same. This only needs to be done one time for each project.
 2. Clone the Github Repository in RStudio. This requires going to the main page of your Github repository and then:
     
     a) Clicking the green CODE button, 
     b) Copying the HTTPS to your clipboard
     c) Going to RStudio and clicking File -> New Project -> Version Control -> Git 
-    d) Copying the HTTPS code into the Repository URL space, naming the RProject the same as your Github repository^[This is not necessary, you can name it whatever you want, but why confuse yourself?], and choosing the folder directory on your computer that you want this project to be nested in. (Only needs to be done 1 time for each project)
+    d) Copying the HTTPS code into the Repository URL space, naming the RProject the same as your Github repository^[This is not necessary, you can name it whatever you want, but why confuse yourself?], and choosing the folder directory on your computer that you want this project to be nested in. This only needs to be done one time for each project.
 
 After these two steps are done, the workflow will remain as follows *for the rest of your project*.
 
 3. Pull any changes. It's important to make this a habit as the first thing you do when you open your RStudio project.
-4. Edit files as necessary. When done making changes, stage them, commit them (adding in a nice message so you know what you did), and then push them. 
+4. Edit files as necessary. When done making changes, stage them, commit them (adding in a nice message so you know what you did), and then push them. I will cover each of these thoroughly in further subsections.
 5. Pull again. This is mostly as insurance in case you forget to pull in a future step 3. Do it. It will not hurt you and will save you headaches down the road.
 
-We'll go through these steps thoroughly in this document. 
+In the next few subsections, I will demonstrate how to recreate this workflow.
 
 ### The Git panel of RStudio
 
-Assuming you have cloned your repository correctly, you should now have a Git panel whenever you switch to your RStudio project that is connected with Git/Github. Figure \ref{gitpanel} shows what each of the aspects of the Git panel means: the panel shows any changes that have been made (checked if staged, unchecked if unstaged), the branch you are on (master in this case- but more on branches later), and buttons to commit, pull, and push.
+Assuming you have cloned your repository correctly, you should now have a Git panel whenever you switch to your RStudio project that is connected with Git/Github. Figure \ref{gitpanel} shows what each of the aspects of the Git panel means: the panel shows any changes that have been made (checked if staged, unchecked if unstaged), the branch you are on (we are on the *master* in this case- but more on branches later), and buttons to commit, pull, and push.
 
 ```{r, echo = F, fig.cap = "\\label{gitpanel}The Git panel of RStudio.", out.width="110%", fig.pos = "h"}
 knitr::include_graphics("stage.png")
@@ -136,11 +136,11 @@ knitr::include_graphics("stage.png")
 
 ### Pulling
 
-As stated in number 3 of the workflow, you want to press the Pull button before you make any changes. In fact, you should make a habit of this being the first thing you do the second you open an RStudio project. Note that you should also press this button after any commits you make. You can never pull too much. 
+As stated in number 3 of the workflow, you want to press the Pull button before you make any changes. In fact, you should make a habit of this being the first thing you do the second you open an RStudio project. Note that you should also press this button after any commits you make. You can never pull too much. It is safe to continue on your work when you get the message "Already up to date."
 
 ### Commiting
 
-Recall that "committing" is jargon for submitting a new version of your work. This subsection will focus on committing within RStudio. As shown in Figure \ref{gitpanel}, you can press the Commit button to save the version of your work. This will bring up a new interface in RStudio as shown in Figure \ref{commit}. From here, you are able to click on any of the files that have **saved** changes to.^[If you have not saved the changes to your local computer, Git will not show any changes!] Check any of the boxes you want to add to this particular commit. Checking a box is equivalent to "staging" a change. When you stage a change, you can see the differences in the files highlighted by green and red. You can stage as many files as you like in a commit. Personally, I think each commit should be a single task, so do not try to stage and commit too many changes at once. You should also add a commit message that explains what you did in the changes. This will be extremely useful for when you want to go back to a previous version. Click the Commit button when ready to commit to the changes.
+Recall that "committing" is jargon for submitting a new version of your work. Git and Github will track each commit you make and you can revert back to these specific versions at any time you like. This subsection will focus on committing within RStudio. As shown in Figure \ref{gitpanel}, you can press the Commit button to save the version of your work. This will bring up a new interface in RStudio as shown in Figure \ref{commit}. From here, you are able to click on any of the files that have **saved** changes to.^[If you have not saved the changes to your local computer, Git will not show any changes!] Check any of the boxes you want to add to this particular commit. Checking a box is equivalent to "staging" a change. When you stage a change, you can see the differences in the files highlighted by green and red. You can stage as many files as you like in a commit. Personally, I think each commit should be a single task, so do not try to stage and commit too many changes at once. You should also add a commit message that explains what you did in the changes. This will be extremely useful for when you want to go back to a previous version. Click the Commit button when ready to commit to the changes.
 
 ```{r, echo = F, fig.cap = "\\label{commit}The Commit user-interface of RStudio.", out.width="110%", fig.pos = "h"}
 knitr::include_graphics("commit.png")
@@ -152,33 +152,36 @@ Now that you have committed a change, be sure to push the changes using the Push
 
 ### Pulling (again)
 
-Now click on the Pull button in the Git panel. If you are working alone on the master branch (we will talk about branches very soon I promise), then you should get a message saying "everything up to date". This is the message we want. Before you do anything new, you need to make certain that you are up to date.
+Now click on the Pull button in the Git panel. If you are working alone on the master branch (we will talk about branches very soon I promise), then you should get a message saying "Already up to date." This is the message we want. Before you do anything new, you need to make certain that you are up to date.
 
 ### The Main Commands (Command Line/Terminal)
 
-The workflow described above can all be done within the terminal. I advise against using the terminal as a beginner since the terminal itself has a steep learning curve, however, once (of it) you are comfortable using it, it can speed up your interactions with Git/Github. I have mapped out the main commands to get you started in the terminal if you want to try it out. Personally, I was not comfortable using these commands until a few days into writing this lecture, so no rush.
+The workflow described above can all be done within the terminal. I advise against using the terminal^[We are actually going to have to use the terminal later in this documenet to revert to previous versions. Of course, you hopefully won't have to do this too often so you can simply copy and paste the lines shown later on.] as a beginner since the terminal itself has a steep learning curve. However, once (or if) you are comfortable using it, it can speed up your interactions with Git/Github. I have mapped out the main commands to get you started in the terminal if you want to try it out. Personally, I was not comfortable using these commands until a few days into writing this lecture, so no rush.
 
 *Assuming all of this is done on the master branch. *
 
-* Stage changes (get ready for saving all the changes to a version)
+* *Stage changes* (e.g., get ready for saving all the changes to a version)
 ```{bash, eval = F}
 git add -A
 ```
 
-Commit changes (finalize adding these changes to your version)
+* *Commit changes* (e.g., finalize adding these changes to your version)
 ```{bash, eval = F}
 git commit -m "this is a commit to take the staged changes and save them as a version"
 ```
 
-Push the changes (put the new changes onto Github)
+* *Push changes* (e.g., put the new changes onto Github)
 ```{bash, eval = F}
 git push
 ```
 
+### Exercise
+
+Make a change to your readme file. Save, stage, commit, push, and pull. Go to your Github Repository - do you see the change?
 
 # Branches
 
-Branches are one of the most appealing features of Git. As an example, suppose you want to try a whole new analysis in your paper, but do not necessarily want to "commit" (bad pun) to the changes. This is where branches come in. A branch is essentially a clone of your files, but you can "branch" off into different directions without hurting your master copy. This includes adding new documents, deleting documents, adding data, editing scripts etc. However, if you like the changes you make on the new branch, you can push and merge them into the master copy. Don't like the changes? Then just delete the branch and switch back to the master copy. For the purposes of this document, we will call our main copy of our files the "master branch". This is generally the default on Github^[Sometimes Github will set up the master branch with the name "main". You can of course change this when initializing your repository.], and you should either adopt this convention or find a very intuitive substitute. 
+Branches are one of the most appealing features of Git. As an example, suppose you want to try a whole new analysis in your paper, but do not necessarily want to "commit" (bad pun) to the changes. This is where branches come in. A branch is essentially a clone of your files, but you can "branch" off into different directions without hurting your master copy. This includes adding new documents, deleting documents, adding data, editing scripts etc. However, if you like the changes you make on the new branch, you can push and merge them into the master copy. Don't like the changes? Then just delete the branch and switch back to the master copy. For the purposes of this document, we will call our main copy of our files the *master branch*. This is generally the default on Github^[Sometimes Github will set up the master branch with the name *main*. You can of course change this when initializing your repository.], and you should either adopt this convention or find a very intuitive substitute. 
 
 Branches have a steep learning curve (as does all of Git), but they are extremely important and make Git worthwhile. 
 
@@ -222,17 +225,23 @@ A rather nice feature of pull requests is that you can set up your coauthor to b
 
 ## Branches with the Terminal
 
-Make a new branch and switch to it (note that the "checkout" command means "switch to"):
+* Make a new branch and switch to it (note that the "checkout" command means "switch to"):
 ```{bash, eval = F}
 git checkout -b "branch_name"
 ```
 
-Push the branch to Github so it will sync.
+* Push the branch to Github so it will sync.
 ```{bash, eval = F}
 git push -u origin branch_name
 ```
 
 Now you can continue making changes as you did before. One new thing will be that you will need to go to your Github account and merge the changes you made by "creating a pull request". 
+
+* Deleting a branch so it no longer appears in your branches on RStudio:
+```{bash, eval = F}
+git branch -D branch_name
+```
+
 
 # .gitignore
 
@@ -246,7 +255,7 @@ Of course, the main benefit of using Git is that you can revert back to previous
 
 ## Reverting Safelty
 
-I want to preface these next few steps by saying you and your coauthor should make sure to have each other's master branches fully pull and up to date before doing anything of the sort. Have only one author do these steps. 
+I want to preface these next few steps by saying you and your coauthor should make sure to have each other's master branches fully pulled and up to date before doing anything of this sort. Have only one author do these steps. 
 
 First, create a new .R file and title it `one.R`. Save, stage, commit (with message "get back here"), push, and pull. Now, let's create 2 new .R files - `two.R` and `three.R`, adding in some rubbish text to each. Save stage, commit (with message "do not want"), push and pull. 
 
