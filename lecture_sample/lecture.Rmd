@@ -242,9 +242,11 @@ You can check out other nice patterns for ignoring files using the [git document
 
 # Reverting 
 
-Of course, the main benefit of using Git is that you can revert back to previous versions of your work. In this section, I'll cover the two most frequent scenarios: reverting a commit that just occurred, and reverting back to a long-ago version. They are both similar, although the latter must be done carefully to avoid potential disaster (I'll show you my semi-fool-proof way).
+Of course, the main benefit of using Git is that you can revert back to previous versions of your work. In this section, I will cover how to revert back to a previous version using a "safe" method.
 
-## Reverting to a previous version example
+## Reverting Safelty
+
+I want to preface these next few steps by saying you and your coauthor should make sure to have each other's master branches fully pull and up to date before doing anything of the sort. Have only one author do these steps. 
 
 First, create a new .R file and title it `one.R`. Save, stage, commit (with message "get back here"), push, and pull. Now, let's create 2 new .R files - `two.R` and `three.R`, adding in some rubbish text to each. Save stage, commit (with message "do not want"), push and pull. 
 
@@ -253,7 +255,14 @@ Next, let's try to get back to our previous version where we only had `one.R` in
 Go to your Github repository on a web browser and click on the "commits" button. Here, we can see all of the commits we've made to the repository with numbers associated with each commit. For fun, you can click on any of these commits and browse what the repository looked like at each of these stages (time travel!). Our goal is to get back to the previous version where we only had the .R file titled `one.R`. Now we are going to follow the following steps:
 
 1. Copy the commit code you see associated with this version (it should read something like `bf7a65c`).
-2. Create a **new branch** called "revert".
+2. Create a **new branch** called "revert" and switch to it.
+3. Type the following in the terminal `git reset --hard bf7a65c`. This does a hard reset to the version bf7a65c.
+4. Type the following in the terminal `git reset --soft Head@{1}`.
+5. Type the following in the terminal `git commit -m "reverting to bf7a65c"`. This commits the version.
+6. Type the following in the terminal `git push`. This pushes the old version to Github.
+7. Finally go to Github and create a pull request. You should be able to merge and bring yourself back!
+
+
 
 
 
