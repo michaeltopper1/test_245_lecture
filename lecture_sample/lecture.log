@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.7.23)  2 SEP 2021 13:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.7.23)  2 SEP 2021 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -524,116 +524,133 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-72.
+45.
 (/Users/michaeltopper/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 192.
+(Font)              <10> on input line 150.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 192.
+(Font)              <7> on input line 150.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 192.
+(Font)              <5> on input line 150.
+<terminal.png, id=99, 1169.36874pt x 736.7525pt>
+File: terminal.png Graphic file (type png)
+<use terminal.png>
+Package pdftex.def Info: terminal.png  used on input line 177.
+(pdftex.def)             Requested size: 516.75423pt x 325.57735pt.
+
+Overfull \hbox (46.9992pt too wide) in paragraph at lines 177--177
+[][]
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [1
 
 {/Users/michaeltopper/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.
-map}]
+map}] [2pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.241 \end{Shaded}
+                   <./terminal.png>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 264.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 275.
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 264.
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 275.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-271.
+282.
 (/Users/michaeltopper/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
 LaTeX Font Warning: Font shape `TS1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `TS1/lmtt/b/sl' tried instead on input line 271.
+(Font)              Font shape `TS1/lmtt/b/sl' tried instead on input line 282.
 
-
-[2]
-<stage.png, id=129, 3597.44pt x 2248.4pt>
-File: stage.png Graphic file (type png)
-<use stage.png>
-Package pdftex.def Info: stage.png  used on input line 382.
-(pdftex.def)             Requested size: 516.70258pt x 322.9391pt.
-
-Overfull \hbox (46.94756pt too wide) in paragraph at lines 382--382
-[][]
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3]
-<commit.png, id=156, 3597.44pt x 2248.4pt>
-File: commit.png Graphic file (type png)
-<use commit.png>
-Package pdftex.def Info: commit.png  used on input line 418.
+<stage.png, id=144, 3597.44pt x 2248.4pt>
+File: stage.png Graphic file (type png)
+<use stage.png>
+Package pdftex.def Info: stage.png  used on input line 393.
 (pdftex.def)             Requested size: 516.70258pt x 322.9391pt.
 
-Overfull \hbox (46.94756pt too wide) in paragraph at lines 418--418
+Overfull \hbox (46.94756pt too wide) in paragraph at lines 393--393
 [][]
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.429 ...on{Pulling (again)}\label{pulling-again}}
-                                                   <./stage.png>] [5pdfTeX warn
-ing (ext4): destination with the same identifier (name{figure.2}) has been alre
-ady used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.460 \end{itemize}
-                    <./commit.png>]
-<branch.png, id=178, 3597.44pt x 2248.4pt>
-File: branch.png Graphic file (type png)
-<use branch.png>
-Package pdftex.def Info: branch.png  used on input line 542.
+[4]
+<commit.png, id=168, 3597.44pt x 2248.4pt>
+File: commit.png Graphic file (type png)
+<use commit.png>
+Package pdftex.def Info: commit.png  used on input line 429.
 (pdftex.def)             Requested size: 516.70258pt x 322.9391pt.
 
-Overfull \hbox (46.94756pt too wide) in paragraph at lines 542--542
+Overfull \hbox (46.94756pt too wide) in paragraph at lines 429--429
 [][]
  []
 
-[6] [7pdfTeX warning (ext4): destination with the same identifier (name{figure.
-3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.590 \end{enumerate}
-                      <./branch.png>]
-<pullrequest.png, id=201, 903.87688pt x 333.245pt>
-File: pullrequest.png Graphic file (type png)
-<use pullrequest.png>
-Package pdftex.def Info: pullrequest.png  used on input line 593.
-(pdftex.def)             Requested size: 516.75989pt x 190.52112pt.
 
-Overfull \hbox (47.00487pt too wide) in paragraph at lines 593--593
-[][]
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.639 \begin{Shaded}
-                     <./pullrequest.png>] [9] [10] (./lecture.aux)
+l.447 
+       <./stage.png>] [6pdfTeX warning (ext4): destination with the same identi
+fier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.477 \end{Shaded}
+                   <./commit.png>]
+<branch.png, id=188, 3597.44pt x 2248.4pt>
+File: branch.png Graphic file (type png)
+<use branch.png>
+Package pdftex.def Info: branch.png  used on input line 553.
+(pdftex.def)             Requested size: 516.70258pt x 322.9391pt.
+
+Overfull \hbox (46.94756pt too wide) in paragraph at lines 553--553
+[][]
+ []
+
+[7] [8pdfTeX warning (ext4): destination with the same identifier (name{figure.
+4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.601 \end{enumerate}
+                      <./branch.png>]
+<pullrequest.png, id=211, 903.87688pt x 333.245pt>
+File: pullrequest.png Graphic file (type png)
+<use pullrequest.png>
+Package pdftex.def Info: pullrequest.png  used on input line 604.
+(pdftex.def)             Requested size: 516.75989pt x 190.52112pt.
+
+Overfull \hbox (47.00487pt too wide) in paragraph at lines 604--604
+[][]
+ []
+
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.650 \end{itemize}
+                    <./pullrequest.png>] [10] [11] (./lecture.aux)
 Package rerunfilecheck Info: File `lecture.out' has not changed.
 (rerunfilecheck)             Checksum: 4E58B98BCAB7CB33740E6A65984BC8B8;3406.
  ) 
 Here is how much of TeX's memory you used:
- 10923 strings out of 480502
- 161419 string characters out of 5898248
+ 10938 strings out of 480502
+ 161647 string characters out of 5898248
  486409 words of memory out of 5000000
- 28315 multiletter control sequences out of 15000+600000
+ 28327 multiletter control sequences out of 15000+600000
  468162 words of font info for 76 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,8n,66p,343b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -652,10 +669,10 @@ ublic/lm/lmri8.pfb></Users/michaeltopper/Library/TinyTeX/texmf-dist/fonts/type1
 /public/lm/lmtko10.pfb></Users/michaeltopper/Library/TinyTeX/texmf-dist/fonts/t
 ype1/public/lm/lmtt10.pfb></Users/michaeltopper/Library/TinyTeX/texmf-dist/font
 s/type1/public/lm/lmtti10.pfb>
-Output written on lecture.pdf (10 pages, 1943626 bytes).
+Output written on lecture.pdf (11 pages, 2016335 bytes).
 PDF statistics:
- 309 PDF objects out of 1000 (max. 8388607)
- 260 compressed objects within 3 object streams
- 86 named destinations out of 1000 (max. 500000)
- 205 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 319 PDF objects out of 1000 (max. 8388607)
+ 267 compressed objects within 3 object streams
+ 89 named destinations out of 1000 (max. 500000)
+ 210 words of extra memory for PDF output out of 10000 (max. 10000000)
 

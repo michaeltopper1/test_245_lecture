@@ -25,14 +25,21 @@ Git is a version control system. Think of it as a better Dropout - you can track
 * It sends a signal to employers (and other academics) that you have ability to learn new practical skills.
 * It is excellent for collaborating.
 * It integrates seamlessly with RStudio.
+* No more `paper_v1.pdf`, `paper_v2.pdf`, `paper_v2_edit.pdf` etc.
 
-Unfortunately, Git has a steep learning curve. This is mainly due to the jargon that comes along with it. I will do my best to define terms, and hopefully make the process a little less confusing.
+Unfortunately, Git has a steep learning curve. This is mainly due to the jargon that comes along with it.^[Git was created by computer scientists, for computer scientists. So the jargon doesn't always translate well to economists.] I will do my best to define terms, and hopefully make the process a little less confusing.
 
 The next few subsections are dedicated to getting all of software installed and communicating with each other for integration. Honestly, this is an extremely painful process without good resources. Fortunately, [there is a good one](https://happygitwithr.com/install-r-rstudio.html) made by Jenny Bryan that I will be following closely throughout this document. 
 
 ## Installing Git 
 
-Git is much different from Github. Git is the actual version control software, while Github is hosting service that provide a home for your Git-based projects. Think of Github as an online repository of files that Git can communicate with to make changes. Before we can get to Github, we need to install the Git software on our local machine. But first, let's check if you installed it at one point already (all of us probably tried learning at one point). Open up the terminal in RStudio (Tools -> Terminal -> New Terminal) and type in the following:
+Git is much different from Github. Git is the actual version control software, while Github is hosting service that provide a home for your Git-based projects. Think of Github as an online repository of files that Git can communicate with to make changes. Before we can get to Github, we need to install the Git software on our local machine. But first, let's check if you installed it at one point already (all of us probably tried learning at one point). Open up the terminal in RStudio (Tools -> Terminal -> New Terminal). You can see an example of where to type this in Figure \ref{terminal}.
+```{r, echo = F, fig.cap = "\\label{terminal}The terminal in RStudio.", out.width="110%", fig.pos = "h"}
+knitr::include_graphics("terminal.png")
+```
+
+
+Now type in the following:
 
 ```{bash}
 which git
@@ -128,7 +135,7 @@ In the next few subsections, I will demonstrate how to recreate this workflow.
 
 ### The Git panel of RStudio
 
-Assuming you have cloned your repository correctly, you should now have a Git panel whenever you switch to your RStudio project that is connected with Git/Github. Figure \ref{gitpanel} shows what each of the aspects of the Git panel means: the panel shows any changes that have been made (checked if staged, unchecked if unstaged), the branch you are on (we are on the *master* in this case- but more on branches later), and buttons to commit, pull, and push.
+Assuming you have cloned your repository correctly, you should now have a Git panel whenever you switch to your RStudio project that is connected with Git/Github. Figure \ref{gitpanel} shows what each of the aspects of the Git panel means: the panel shows any changes that have been made (checked if staged, unchecked if unstaged), the branch you are on (we are on the *master* in this case-more on branches later), and buttons to commit, pull, and push.
 
 ```{r, echo = F, fig.cap = "\\label{gitpanel}The Git panel of RStudio.", out.width="110%", fig.pos = "h"}
 knitr::include_graphics("stage.png")
@@ -214,9 +221,9 @@ knitr::include_graphics("pullrequest.png")
 
 ## Branches when working collaboratively
 
-Consider the following workflow which is mean to demonstrate the problem of working on only one branch on a collaborative project:
+Consider the following workflow which is meant to demonstrate the problem of working on only one branch on a collaborative project:
 
-*You and your coauthor both decide to work on the R script titled `regressions_main.R` at 10:00am. You want to try one analysis, while your coauthor wants to try another. At 10:30am, you find some unique results that you believe really enhance your paper. You save the file, commit the changes, and (try to) push to Github. However, 5 minutes before you, your coauthor found different results that they believe are worthy of saving. They saved, committed, and pushed to Github at 10:25am. Now when you try and push your changes, there is an issue. Git had already saved the version that your coauthor pushed at 10:25, so it does not know how to merge in your changes with the new lines your coauthor made.*
+> *You and your coauthor both decide to work on the R script titled `regressions_main.R` at 10:00am. You want to try one analysis, while your coauthor wants to try another. At 10:30am, you find some unique results that you believe really enhance your paper. You save the file, commit the changes, and (try to) push to Github. However, 5 minutes before you, your coauthor found different results that they believe are worthy of saving. They saved, committed, and pushed to Github at 10:25am. Now when you try and push your changes, there is an issue. Git had already saved the version that your coauthor pushed at 10:25, so it does not know how to merge in your changes with the new lines your coauthor made.*
 
 Branches solve this problem. Each person can make their own branch which is a copy of the master branch (call this branch_objective), and begin working on their changes. Essentially every task you do when working collaboratively should be done on a branch with each author first pulling any new changes on the master branch, creating a branch that is a copy of the master, adding changes, committing and pushing the changes, then creating a pull request. 
 
@@ -255,7 +262,7 @@ Of course, the main benefit of using Git is that you can revert back to previous
 
 ## Reverting Safelty
 
-I want to preface these next few steps by saying you and your coauthor should make sure to have each other's master branches fully pulled and up to date before doing anything of this sort. Have only one author do these steps. 
+*I want to preface these next few steps by saying if you are working collaboratively, you and your coauthor should make sure to have each others master branches fully pulled and up to date before doing anything of this sort. Have only one author do these steps. However, for this Guided Exercise, we will be working alone.*
 
 First, create a new .R file and title it `one.R`. Save, stage, commit (with message "get back here"), push, and pull. Now, let's create 2 new .R files - `two.R` and `three.R`, adding in some rubbish text to each. Save stage, commit (with message "do not want"), push and pull. 
 
